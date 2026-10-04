@@ -1,0 +1,22 @@
+# Entorno virtual
+backend/.venv/
+
+# Variables de entorno
+backend/.env
+
+# Cachés de Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Base de datos local
+backend/instance/
+*.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

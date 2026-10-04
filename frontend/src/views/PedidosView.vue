@@ -289,18 +289,25 @@ async function guardarPedido() {
   mensaje.value = "";
   error.value = "";
 
-  if (!validarFormulario()) {
-    return;
-  }
+ if (!editando.value && !validarFormulario()) {
+  return;
+}
 
   guardando.value = true;
 
-  const datos = {
+let datos;
+
+if (editando.value) {
+  datos = {
+    estado: form.estado,
+  };
+} else {
+  datos = {
     cliente_id: Number(form.cliente_id),
     producto_id: Number(form.producto_id),
     cantidad: Number(form.cantidad),
-    estado: form.estado,
   };
+}
 
   try {
     if (editando.value) {

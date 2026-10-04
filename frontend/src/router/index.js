@@ -6,6 +6,10 @@ const router = createRouter({
   routes: [
     {
       path: "/",
+      redirect: "/dashboard",
+    },
+    {
+      path: "/dashboard",
       component: () => import("../views/DashboardView.vue"),
     },
     {
@@ -22,7 +26,7 @@ const router = createRouter({
     },
     {
       path: "/:pathMatch(.*)*",
-      redirect: "/",
+      redirect: "/dashboard",
     },
   ],
 });

@@ -3,6 +3,7 @@ backend/.venv/
 
 # Variables de entorno
 backend/.env
+frontend/.env
 
 # Cachés de Python
 __pycache__/
